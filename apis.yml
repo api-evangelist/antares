@@ -1,23 +1,73 @@
 aid: antares
+
 name: Antares
-description: 'Antares is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.antares.com/wp-content/uploads/2026/05/Antares-Capital_1200x675.webp
+
+description: 'Antares is a technology company that provides advanced data analytics and cloud-based solutions for financial services. The company focuses on delivering scalable platforms that enable real-time data processing, risk assessment, and market insights for institutional investors and traders. Antares aims to empower clients with customizable tools and APIs that integrate seamlessly into existing workflows, enhancing decision-making and operational efficiency.'
+
 url: https://raw.githubusercontent.com/api-evangelist/antares/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
-- Company
-apis: []
+- Private Credit
+- Liquid Credit
+- Liquidity Solutions
+- Institutional Investors
+- Insurance Companies
+- Financial Advisors
+- Sponsors
+- Alternative Credit
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/antares-llms.txt
+- type: Hosts
+  url: hosts/antares-hosts.yml
+- type: Vendors
+  url: vendors/antares-vendors.yml
+- type: TermsOfService
+  url: https://www.antares.com/legal/terms-conditions/
+- type: PrivacyPolicy
+  url: https://www.antares.com/legal/privacy-policy/
+- type: Newsroom
+  url: https://www.antares.com/our-perspectives/media
+- type: DomainSecurity
+  url: security/antares-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.antares.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: Antares provides no public developer program or API documentation.
+  evidence:
+    - url: https://www.antares.com
+      status: 200
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
